@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Slider, Image } from 'react-native';
+import { StyleSheet, Text, View, Slider, Image, ScrollView } from 'react-native';
 
 export default class App extends React.Component {
 
@@ -24,6 +24,8 @@ export default class App extends React.Component {
 
     return (
       <View style={styles.container}>
+      <Text style={styles.btfo}>DEFINITELY SNAPCHAT</Text>
+
       <Image
         style={{width: this.state.value * 3, height: this.state.value * 3}}
         source={{uri: 'http://www.stickpng.com/assets/thumbs/584c4c1b1fc21103bb375bab.png'}}
@@ -53,6 +55,18 @@ const styles = StyleSheet.create({
     fontSize: 50
   },
   slider: {
-    width: 100
+    position: 'absolute',
+    bottom: 10,
+    width: 200
+  },
+  btfo: {
+    fontSize: 30,
+    textAlign: 'center',
+    position: 'absolute',
+    top: 200
+  },
+  scrollit: {
+    marginTop: 310,
+    height: 100
   },
 });
